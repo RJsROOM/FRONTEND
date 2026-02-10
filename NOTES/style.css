@@ -1,0 +1,359 @@
+/* Boiler plate */
+@font-face {
+    font-family: horror;
+    src: url(./Winter\ Tosca.otf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+
+
+
+/* h1{
+    color: blueviolet;
+    background-color: rgb(19, 10, 74);
+    font-size: 50px;
+    font-family: horror;
+    font-weight: 900;
+    text-align: center;
+}
+#hero{
+    color: green;
+    background-color: lightgrey;
+}
+#villain{
+    color: red;
+    background-color: black;
+}
+.description{
+    font-size: 20px;
+    text-align: center;
+    color: rgb(209, 80, 0);
+} */
+
+
+
+
+/* #box{
+    height: 100%;
+    border: 5px solid white;
+    border-radius: 30px;
+    width: 100%;
+    background: linear-gradient(to right,red,blue,purple,yellow);
+    background: linear-gradient(to right bottom,purple,yellow,red);
+    background: linear-gradient(red 30%,blue);
+    background: radial-gradient(yellow,red,orange,black);
+    background: conic-gradient(yellow,red,orange);
+    background-image: url(https://imgs.search.brave.com/ruUrQY0tYuBMlleEenzqBPeh3qbKx5yK_TToka1NKxA/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMjE5/Mzk5NDM0NS92ZWN0/b3IvY29uY2VudHJp/Yy1jaXJjbGVzLWFu/ZC1saWdodC1iZWFt/cy1hYnN0cmFjdC1i/YWNrZ3JvdW5kLmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz1R/Wjc4M1d1Vzlxa0lQ/aEtMYmNCZDhkV04z/YnJtM3ZTZm9EMS1P/dTRlRTZBPQ);
+    background-size: cover;
+    background-position: center;
+} */
+
+
+
+
+/* #main{
+    height: 100%;
+    width: 100%;
+    background-image: url(https://imgs.search.brave.com/YkYO7m-DbtScec6PZc3uVIMcUdN82MHi--JT3iA3wTU/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMjIv/Mzg2LzgyOS9zbWFs/bC9ibGFjay1tb2Rl/cm4tY2FyLWhlYWRs/aWdodHMtZnJvbnQt/dmlldy1jcmVhdGVk/LXdpdGgtZ2VuZXJh/dGl2ZS1haS1waG90/by5qcGc);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 50px;
+}
+h1{
+    color: bisque;
+    font-family: horror;
+    font-size: 60px;
+}
+button{
+    font-size: 20px;
+    padding: 10px 20px; 
+    color: #64A1B0;
+    background: transparent;
+    border-radius: 30px;
+    border: 2px dashed #64A1B0;
+} */
+
+
+
+
+/* jo bhi element absolute hota h wo uth jata h ek tarike se and usko agr move krege to wo kisi ke bhi upar aa skta h */
+/* jinbhi selector pr agr position attribute(yani absolute,sticky,relative and fixed) lga h to sirf usko hmlog top-left-right-bottom-zindex k trike se poore screen pe move kr skte h. or agr uspe position attribute ni h to uskpe ye sb properties ni lga skte ya wo properties kaam ni kregi. 
+
+position absolute krne pe element out of viewport bhi jaa sakta h or agr hm chaahte h ki wo viewport k andr hi move kre to uske parent element ko hmlog position relative dete h.
+
+position fixed jo h wo kisi element ko web page pe ek jgh fix kr deta h chaahe hm scroll krle pr uska position change ni hoga screen k coordinates se. 
+
+sticky property jo hota h wo apne parent element k height jitna to scroll krega pr apne parent elemnt k khtm hone k baad wo bi ruk jaega..isme hme uske lie extra properties lgani prti h jese top-bottom-left-right se uska position ky ahona chiye jha pe wo ruk jae*/
+/* #cars{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+#car1{
+    height:100px;
+    width:200px;
+    background-color: pink;
+}
+#car2{
+    position: absolute;
+    height:200px;
+    width:300px;
+    background-color: blue;
+}
+#car3{
+    height:300px;
+    width:400px;
+    background-color: green;
+}  */
+
+
+
+/* #box1{
+    height: 200px;
+    width: 200px;
+    background-color: red;
+    clip-path: polygon(100% 45%, 49% 0, 50% 100%, 0 100%);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+} */
+/* #box2{
+    height: 200px;
+    width: 200px;
+    background-color: blue;
+    position: absolute;
+    top: 38%;
+    left: 38%;
+}
+#box3{
+    height: 200px;
+    width: 200px;
+    background-color: green;
+} */
+/* to manage the overlapping of boxes correctly we use z-index property. the element which comes later in the html hierarchy has by default more z-index than its previous one, thats why the box2 was overlapping box1 with same properties.*/
+/* trasform:translate is used to move the object based on its size's parameters. so to center the box1 perfectly we use transform translate -50% on both x and y axis. becz the top-left point of the box would have moved to the center and we want to move the box to the center by its internal midpoint, thats why we use transform:translate property. 
+for the wierd shape we have used clippath site.*/
+
+
+
+/* #parent
+{
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(yellow,red,orange,black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+#child1{
+    height: 200px;
+    flex-shrink: 0;
+    width: 200px;
+    background-color: crimson;
+    border: 2px solid white;
+    box-shadow: 20px 35px 20px black;
+}
+#child2{
+    flex-shrink: 0;
+    height: 200px;
+    width: 200px;
+    background-color: lightseagreen;
+    border: 3px solid white;
+    box-shadow: 20px 35px 20px black;
+}
+#child3{
+    flex-shrink: 0;
+    height: 200px;
+    width: 200px;
+    background-color: teal;
+    border: 3px solid white;
+    box-shadow: 20px 35px 20px black;
+}
+#btn{
+    top: 68%;
+    left: 50%;
+    position: absolute;
+    border-radius: 50px;
+    padding: 10px 40px;
+    background-color: brown;
+    border: 5px solid brown;
+    color: white;
+    font-weight: 600;
+}
+#btn:hover{
+    background-color: transparent;
+    color: white;
+} */
+
+
+
+/* since we know that there are two kinds of tags in html: inline elements and block elements..the inline elements take the space which is necessory for them and block elements take the space of the whole line.and therefore there is a css preoperty named display:inline-block. */
+/*IMPORTANT:  suppose we have created multiple classes or ids of same name and still we want to target specific id or class then we can use nth-child property. like #class_name:nth-child(2) will target the second class. nth-child starts from 1 not from 0. And if the counting you want should begin from last then you can use #class_name:nth-last-child() property, this starts from the last and goes to count 1.
+this property can be used differently also like applying linear expressions. means if you want to apply css styling in alternate manner then we can write #class_name:nth-child(2n) or if you want to apply styling to the odd numbers then we can replace 2n with 2n-1.*/
+ /*if we want to make a grid of boxes then we can use display:grid property. and to manage the grid we can use grid-template-columns and grid-template-rows properties. like if we want 4 columns in a row then we can write grid-template-columns:repeat(4,1fr); fr means fraction of available space. and to manage the gap between the boxes we can use gap property. like gap:10px; */
+/* until now we have applied background color,gradient-colors and images but if we want to apply the gradient or image to the text only then we can use background-clip:text property along with some other properties. like:
+h1{
+    font-size: 60px;
+    font-family: horror;
+    background-image: linear-gradient(to right,red,blue,purple,yellow);
+    background-clip: text;
+    color: transparent;
+}
+similarly if you want something moving in the text in place of gradient or images then we can use gifs also.simply replacing the background image url with the gif url.
+and if you want to apply border to your text then we can use -webkit-text-stroke property. like -webkit-text-stroke:2px black;
+*/
+
+
+/* day18 */
+
+/* main{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: grid;
+    grid-template-rows: 70px 1fr 100px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px; */
+    /* column-gap: 10px;
+    row-gap: 10px;  can also be used for specifically giving gap to col or row... minmax() works like giving min and max size to the grid element*/
+
+/* }
+.child{
+    background-color: crimson;
+    border: 3px solid white;
+}
+#child1{
+    grid-row: 1/2;
+    grid-column: 1/2;
+} */
+
+/* main{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    color: azure;
+    display: grid;
+    grid-template-columns:30% 1fr ;
+    grid-template-rows:80px 1fr 150px ;
+    grid-template-areas: "header header"
+                          "aside section"
+                          "footer footer";
+    grid-gap: 3px;
+}
+header{
+    background-color: aqua;
+    grid-area: header;
+}
+aside{
+    background-color: blueviolet;
+    grid-area: aside;
+}
+section{
+    background-color: burlywood;
+    grid-area: section;
+}
+footer{
+    background-color: maroon;
+    grid-area: footer;
+
+} */
+
+/* main{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    color: azure;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 80px 1fr 1fr;
+    grid-template-areas: "header header header"
+                          "section section section"
+                          "div1 div2 div3";
+    grid-gap: 20px;
+    padding: 20px;
+}
+header{
+    background-color: aquamarine;
+    grid-area: header;
+}
+section{
+    background-color: blueviolet;
+    grid-area: section;
+}
+.div1{
+    background-color: burlywood;
+    grid-area: div1;
+}
+.div2{
+    background-color: rgb(81, 13, 71);
+    grid-area: div2;
+}
+.div3{
+    background-color: rgb(24, 95, 19);
+    grid-area: div3;
+} */
+
+/* main{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    color: azure;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "left-top top-center top-right"
+                          "left-top center bottom-right"
+                          "left-bottom left-bottom bottom-right";
+    grid-gap: 20px;
+    padding: 20px;
+}
+#left-top{
+    background-color: aquamarine;
+    grid-area: left-top;
+    border-radius: 20%;
+}
+#top-center{
+    background-color: blueviolet;
+    grid-area: top-center;
+    border-radius: 20%;
+}
+#top-right{
+    background-color: burlywood;
+    grid-area: top-right;
+    border-radius: 20%;
+}
+#center{
+    background-color: rgb(81, 13, 71);
+    grid-area: center;
+    border-radius: 20%;
+}
+#bottom-right{
+    background-color: rgb(24, 95, 19);
+    grid-area: bottom-right;
+    border-radius: 20%;
+}
+#left-bottom{
+    background-color: crimson;
+    grid-area: left-bottom;
+    border-radius: 20%;
+} */
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,91 @@
+@font-face {
+    font-family: Font;
+    src: url(./Winter\ Tosca.otf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(1, 25, 25, 0.708);
+    color: wheat;
+}
+#nav{
+    padding: 15px 30px;
+    font-size: 25px;
+}
+#nav a{
+    color: wheat;
+    text-decoration: none;
+    margin-right: 30px;
+    font-size: 25px;
+}
+#main>h1{
+    font-size: 200px;
+    font-weight: 450;
+    padding-left: 150px;
+    margin-top: 50px;
+    font-family: Font;
+}
+#btmleft{
+    position: absolute;
+    width: 200px;
+    bottom: 20%;
+    left: 5%;
+}
+#btmleft h3{
+    font-size: 30px;
+}
+#btmleft p{
+    margin-top: 5px;
+    font-size: 18px;
+}
+#btmleft h4{
+    margin-top: 15px;
+    font-size: 22px;
+}
+
+#btmbar{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 30px 70px;
+    background: transparent;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+#btmbar a{
+    color: wheat;
+    text-decoration: none;
+    font-size: 32px;
+    font-size: 30px;
+}
+#main>img{
+    position: absolute;
+    height: 250px;
+}
+#firstimg{
+    height: 350px;
+    top: 48%;
+    left: 30%;
+}
+#secimg{
+    top: 62%;
+    left: 40%;
+    width: 250px;
+}
+#thirdimg{
+    top: 35%;
+    left: 52%;
+    width: 200px;
+    height: 300px;
+}
