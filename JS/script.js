@@ -263,11 +263,28 @@ there are various types of functions in JS:
 3. callback function: when usng a higher order function when we pass the function as an argument to the parent function as a parameter then the function used as an argument is called a callback function
 4. first class function: it is a concept which is used by other prog languages as well. it says that a function can be used as a variable to other functions. for example- let a =function(){}  or  function abc(a,b){}
 abc(1, function(){})
-5. pure function: 
+5. pure function: same input= same output AND no side effects
+eg. let a =12
+    function abc(val) console.log(val+2)
+    abc(a);
+6. impure functions: same input != same output AND koi na koi side effecrs rhega
+eg. let a=12
+    function abc(val) console.log(math.random()+val)
+    abc(a);
+
+closure are those functions which return another function but that returning function uses a variable from its parent function. every closure is a higher order function too.
+eg. function abc(){
+    let a=12;
+    return function() consoe.log(a)
+}
 
 
 
 
+--------------------------ARRAYS AND OBJECT IN JS-----------------------
+
+
+functions on arrays--psush, pop, shift, unshift, indexOf, filter, some, map, reduce, spread oprator, slice, reverse, sort, join, toString, array destructuring{let arr=[1,2,3,4] let [a,,b]= arr output: a=1 and b=3}
 
 
 
