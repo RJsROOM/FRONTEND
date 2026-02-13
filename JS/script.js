@@ -286,8 +286,50 @@ eg. function abc(){
 
 functions on arrays--psush, pop, shift, unshift, indexOf, filter, some, map, reduce, spread oprator, slice, reverse, sort, join, toString, array destructuring{let arr=[1,2,3,4] let [a,,b]= arr output: a=1 and b=3}
 
+operations on objects--freeze, seal, destructuring, object methods, this keyword.
 
+
+level-1 questions on arrays...
+
+1. write a function satHello() which prints "hello JS"
+function sayHellor(){
+    console.log("hello JS")
+}
+sayHellor();
+
+2. create a function add(a,b) which returns the sume and gives the rsult
+function add(a,b){
+    return a+b;
+}
+console.log(add(2,3));      return keyword gives the values on the place from where the function was called.
+
+3. write a function with a default parameter name="rakshit" that prints "hi <name>"
+function hello(val="rakshit"){
+    console.log(`hi ${val}`)
+}
+hello()
+
+4. use rest parameters to make a function that adds multiple numbers
+function addunlimited(...c){
+    let result=0;
+    c.forEch(function(val){
+        result+=val;
+    })
+    console.log(rsult)
+}
+addunlimited(1,2,3,4,5,6,7)
+
+5. create an object person with keys name, age, city an dprint each key's value
+let obj={
+    name: "rakshit",
+    age: 23,
+    city: "varanasi"
+}
+for(let key in obj){
+    console.log(obj[key])
+}
 
 
 
 */
+
