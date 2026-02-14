@@ -329,6 +329,43 @@ for(let key in obj){
     console.log(obj[key])
 }
 
+6. write a HOF runTwice() that takes another func and executes it two times.
+function runTwice(fn){
+    fn();
+    fn();
+}
+runTwice(function(){
+    console.log("hello RJsROOM")
+})
+
+7. write a fuunction that uses object destructuring inside parameters to extraxt and print name anad age.
+let obj={
+name: "rakshit",
+age: 23,
+city: "varanasi"
+}
+function extract({name, age}){
+    console.log(name, age)
+}
+extract(obj)
+
+
+
+NOTE: OBJECT K ANDAR AGR KOI FUNCTION BNATE H OR USKE DIRECTLY ANDR ME "THIS" KEYWORD USE KREGE TO USKA SCOPE WO POORA OBJECT HOJATA H..MAGAR...AGR HM USS OBJECT ME CREATED FUNCTION K ANDAR EK OR FUNCTION BNATE H JO KI ARROW FUNCTION NI H TB "THIS" KEYWORD APNA SCOPE BADAL LETA H OR GLOBAL BNJATA H...SO, to hold the value of "this" we only use arrow function inside the object's parent function..doing not so will remove the scope of "this" keyword from object to gobal.
+
+
+8. given an array to numbrs use map() to create a new array of its squared numbers
+let arr=[1,2,3,4,5,6]
+let newarr=arr.map(function(val){
+    return val*val
+})
+console.log(newarr);
+
+NOTE: since we know that objects are mutable by nature and by which we can alter the values inside it at any line of code and also we can add new key-value pairs also..so to preveent it we use "object.freeze(obj_name)".
+on the othe rhand,
+"object.seal(obj_name)" is used only to update the values of the created object but doesn't allows us to add new keys to the object.
+
+
 
 
 */
