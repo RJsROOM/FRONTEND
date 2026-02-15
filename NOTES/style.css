@@ -217,6 +217,8 @@ and if you want to apply border to your text then we can use -webkit-text-stroke
 
 /* day18 */
 
+
+
 /* main{
     height: 100%;
     width: 100%;
@@ -352,8 +354,29 @@ section{
 
 
 
+/* day 19 */
+
+
+/* 
+
+units used in styling-
+
+1. px: pixels are fixed and do not change when changing the size  of the viewport.
+2. % : the when using percentage it uses its parent container as the base mark and adjusts itself when parent's size changes..if there is no parent then it takes full viewport as its parent container.
+3. vw/vh(viewport width and height): the vw takes the reference of the full viewport and adjusts itself when any changes occur.
+4. vmax/vmin(viewport maximum and minimum): this unit adjusts itself according to the maximum of either width or height..that is, if the width of the screen is more than the height of the screen then the vmax will adjust itself acc. to the width of the screen and when the width of the screen is less than the hieght of the screen then the vmax will start adjusting acc. to the height of the screen..vica-versa
+5. em(emphasis): this unit is totally dependant on its parent's size and take sreference from its parent element only(1em=same as parent's sizing, 2em= 2 times the parent's sizing..so on)...and if there is no parent elemnt available then it takes viewport as its parent.
+6. rem(root emphasis): it is the universal fixed size property which is equals to 16px(1rem=16px fixed)..it can be used anywhere when there is need.
+
+*/
+
+
+/* day 20 */
+
+/* 
 
 
 
 
+*/
 
