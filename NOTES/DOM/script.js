@@ -52,7 +52,75 @@ btn.addEventListener('click', function(){
 })
 */
 
+// ---------------------------------------------------------------------
+
+// creating an element and appending a child
+/* 
+eg.-
+1. var btn= document.querySelector('button')
+btn.addEventListener('click', function(){
+    var h1= document.createElement('h1')
+    h1.innerHTML= "hello RJ"
+    console.log(h1)
+}
+)
+
+2. var h1= document.createElement('h1')
+h1.innerHTML= "hello RJ"
+var body= document.querySelector('body')
+body.appendChild(h1)
+
+3. var btn= document.querySelector('button')
+var main= document.querySelector('main')
+
+btn.addEventListener('click', ()=>{
+    var div= document.createElement('div')
+
+    var x= Math.random()*100
+    var y= Math.random()*100
+    var rot= Math.random()*360
+    var c1= Math.floor(Math.random()*256)
+    var c2= Math.floor(Math.random()*256)
+    var c3= Math.floor(Math.random()*256)
 
 
+    div.style.height= '50px'
+    div.style.width= '50px'
+    div.style.position= 'absolute'
+    div.style.left= `${x}%`
+    div.style.top= `${y}%`
+    div.style.rotate= `${rot}deg`
+    div.style.backgroundColor= `rgb(${c1},${c2},${c3})`
+
+
+    main.appendChild(div)
+})
+
+4. var btn= document.querySelector('button')
+var main= document.querySelector('main')
+
+var arr=['rakshit', 'raj', 'rohan', 'adarsh', 'osama', 'krishna', 'yash', 'sufiyan']
+
+btn.addEventListener('click', ()=>{
+    var h2= document.createElement('h2')
+    var x= Math.random()*100
+    var y= Math.random()*100
+    var rot= Math.random()*360
+    var scl= Math.random(0)*3
+
+    h2.innerHTML= arr[Math.floor(Math.random()*arr.length)]
+    h2.style.position= 'absolute'
+    h2.style.left= `${x}%`
+    h2.style.top= `${y}%`
+    h2.style.rotate= `${rot}deg`
+    h2.style.transform= `scale(${scl})`
+
+
+    main.appendChild(h2)
+})
+
+*/
+
+// ----------------------------------------------------------------------
 
 
