@@ -122,5 +122,46 @@ btn.addEventListener('click', ()=>{
 */
 
 // ----------------------------------------------------------------------
+// setTimeout() and setInterval() : making JS work like asynchronous lanaguage.
+/*  
+eg.--
+
+1. console.log("one")
+setTimeout(function(){
+    console.log('hello')
+},1000)
+console.log("two")
+
+2. var h1= document.querySelector('h1')
+var btn= document.querySelector('button')
+var arr=['rakshit', 'raj', 'rohan', 'adarsh', 'osama', 'krishna', 'yash', 'sufiyan']
+
+btn.addEventListener('click', ()=>{
+    h1.innerHTML= 'changing user..'
+    setTimeout(()=>{
+        h1.innerHTML=arr[Math.floor(Math.random()*arr.length)]
+    },400)
+})
+
+3. var h1= document.querySelector('h1')
+var btn= document.querySelector('button')
+var arr=['rakshit', 'raj', 'rohan', 'adarsh', 'osama', 'krishna', 'yash', 'sufiyan']
+
+btn.addEventListener('click', ()=>{
+    h1.innerHTML= 'changing user..'
+    var auto= setInterval(()=>{
+        h1.innerHTML=arr[Math.floor(Math.random()*arr.length)]
+    },500)
+    
+    setTimeout(()=>{
+        clearInterval(auto)
+    },3000)
+})
+
+*/
+
+
+
+
 
 

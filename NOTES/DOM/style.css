@@ -38,6 +38,10 @@ button:active{
     scale: 0.95;
 } */
 
+/* --------------------------------------------------------- */
+
+
+
 /* body{
     background-color: black;
 }
@@ -72,4 +76,32 @@ button{
 }
 button:active{
     scale:0.95;
+} 
+*/
+
+
+/* --------------------------------------------------------------- */
+
+/* main{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    flex-direction: column;
+}
+button{
+    padding: 10px 20px;
+    background-color: crimson;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    position: relative;
+    z-index: 8;
+}
+button:active{
+    scale:0.95;
 } */
+
