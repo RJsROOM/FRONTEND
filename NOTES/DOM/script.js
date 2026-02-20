@@ -248,6 +248,27 @@ const users = [
     profession: "Cybersecurity Analyst",
     description: "Focused on securing systems and protecting organizations from digital threats.",
     tags: ["Network Security", "Ethical Hacking", "Risk Assessment", "Cloud Security"]
+  },
+  {
+    fullname: "Isabella Clark",
+    image: "https://images.unsplash.com/photo-1544723795-3fb6469f5b39",
+    profession: "Mobile App Developer",
+    description: "Building high-performance cross-platform mobile apps with modern technologies.",
+    tags: ["Flutter", "React Native", "Android", "iOS"]
+  },
+  {
+    fullname: "Ethan Walker",
+    image: "https://images.unsplash.com/photo-1527980965255-d3b416303d12",
+    profession: "DevOps Engineer",
+    description: "Automating deployments and managing cloud infrastructure for scalable systems.",
+    tags: ["AWS", "Docker", "Kubernetes", "CI/CD"]
+  },
+  {
+    fullname: "Olivia Davis",
+    image: "https://images.unsplash.com/photo-1554151228-14d9def656e4",
+    profession: "Content Creator",
+    description: "Creating engaging digital content focused on tech, productivity, and lifestyle.",
+    tags: ["YouTube", "Blogging", "Video Editing", "Brand Strategy"]
   }
 ];
 
