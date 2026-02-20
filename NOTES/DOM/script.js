@@ -162,7 +162,7 @@ btn.addEventListener('click', ()=>{
 
 // ---------------------------------------------------------------
 /*
-var card= document.querySelector('.card')
+4. var card= document.querySelector('.card')
 var love= document.querySelector('#love')
 
 card.addEventListener('dblclick', ()=>{
@@ -179,7 +179,89 @@ card.addEventListener('dblclick', ()=>{
         love.style.transform= 'translate(-50%,-300%) scale(0) rotate(-60deg)'
     },1200)
 })
+
+5. var arr=[
+    {
+        user: "rakshit",
+        age: 22,
+        city: "varanasi"
+    },
+    {
+        user: "raj",
+        age: 21,
+        city: "varanasi"
+    },
+    {
+        user: "rohan",
+        age: 22,
+        city: "varanasi"
+
+    },
+    {
+        user: "adarsh",
+        age: 22,
+        city: "muzaffarnagar"
+    }
+]
+
+var sum=0
+arr.forEach((val)=>{
+    sum += val.age
+})
+console.log(sum)
 */
 
+// ---------------------------------------------------------------
+
+const users = [
+  {
+    fullname: "Aarav Mehta",
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
+    profession: "Full Stack Developer",
+    description: "Passionate about building scalable web applications and exploring new JavaScript frameworks.",
+    tags: ["JavaScript", "React", "Node.js", "MongoDB"]
+  },
+  {
+    fullname: "Sofia Williams",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+    profession: "UI/UX Designer",
+    description: "Designing intuitive and beautiful user experiences with a focus on accessibility.",
+    tags: ["Figma", "Adobe XD", "User Research", "Prototyping"]
+  },
+  {
+    fullname: "Liam Johnson",
+    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d",
+    profession: "Data Scientist",
+    description: "Turning data into actionable insights using machine learning and statistical analysis.",
+    tags: ["Python", "Machine Learning", "Pandas", "AI"]
+  },
+  {
+    fullname: "Emily Brown",
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80",
+    profession: "Digital Marketer",
+    description: "Helping brands grow through data-driven marketing strategies and social media campaigns.",
+    tags: ["SEO", "Content Marketing", "Google Ads", "Analytics"]
+  },
+  {
+    fullname: "Noah Martinez",
+    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2",
+    profession: "Cybersecurity Analyst",
+    description: "Focused on securing systems and protecting organizations from digital threats.",
+    tags: ["Network Security", "Ethical Hacking", "Risk Assessment", "Cloud Security"]
+  }
+];
+
+var sum= ''
+users.forEach((val)=>{
+    sum += `<div class="card">
+            <img src=${val.image} alt="">
+            <h3>${val.fullname}</h3>
+            <h4>${val.profession}</h4>
+            <p>${val.description}</p>
+        </div>`
+})
+
+var main= document.querySelector('main')
+main.innerHTML= sum
 
 

@@ -153,3 +153,47 @@ button:active{
     transform: translate(-50%,-50%) scale(0) rotate(-60deg);
     transition: all cubic-bezier(.65,1,.77,1.44) 0.4s;
 } */
+
+
+/* ------------------------------------------------------------- */
+
+
+main{
+    background-color: black;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.card{
+    height: 340px;
+    width: 280px;
+    background-color: whitesmoke;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    
+}
+.card img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.card h3{
+    font-size: 26px;
+    white-space: nowrap; /*this property is responsible for not letting our text go to another line */
+    color: steelblue;
+}
+.card h4{
+    font-size: 18px;
+    color: maroon;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.card p{
+    color: black;
+    font-size: 14px;
+}
