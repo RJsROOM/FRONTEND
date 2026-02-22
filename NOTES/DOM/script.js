@@ -213,76 +213,114 @@ console.log(sum)
 
 // ---------------------------------------------------------------
 
-const users = [
-  {
-    fullname: "Aarav Mehta",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
-    profession: "Full Stack Developer",
-    description: "Passionate about building scalable web applications and exploring new JavaScript frameworks.",
-    tags: ["JavaScript", "React", "Node.js", "MongoDB"]
-  },
-  {
-    fullname: "Sofia Williams",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
-    profession: "UI/UX Designer",
-    description: "Designing intuitive and beautiful user experiences with a focus on accessibility.",
-    tags: ["Figma", "Adobe XD", "User Research", "Prototyping"]
-  },
-  {
-    fullname: "Liam Johnson",
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d",
-    profession: "Data Scientist",
-    description: "Turning data into actionable insights using machine learning and statistical analysis.",
-    tags: ["Python", "Machine Learning", "Pandas", "AI"]
-  },
-  {
-    fullname: "Emily Brown",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80",
-    profession: "Digital Marketer",
-    description: "Helping brands grow through data-driven marketing strategies and social media campaigns.",
-    tags: ["SEO", "Content Marketing", "Google Ads", "Analytics"]
-  },
-  {
-    fullname: "Noah Martinez",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2",
-    profession: "Cybersecurity Analyst",
-    description: "Focused on securing systems and protecting organizations from digital threats.",
-    tags: ["Network Security", "Ethical Hacking", "Risk Assessment", "Cloud Security"]
-  },
-  {
-    fullname: "Isabella Clark",
-    image: "https://images.unsplash.com/photo-1544723795-3fb6469f5b39",
-    profession: "Mobile App Developer",
-    description: "Building high-performance cross-platform mobile apps with modern technologies.",
-    tags: ["Flutter", "React Native", "Android", "iOS"]
-  },
-  {
-    fullname: "Ethan Walker",
-    image: "https://images.unsplash.com/photo-1527980965255-d3b416303d12",
-    profession: "DevOps Engineer",
-    description: "Automating deployments and managing cloud infrastructure for scalable systems.",
-    tags: ["AWS", "Docker", "Kubernetes", "CI/CD"]
-  },
-  {
-    fullname: "Olivia Davis",
-    image: "https://images.unsplash.com/photo-1554151228-14d9def656e4",
-    profession: "Content Creator",
-    description: "Creating engaging digital content focused on tech, productivity, and lifestyle.",
-    tags: ["YouTube", "Blogging", "Video Editing", "Brand Strategy"]
-  }
-];
+// const users = [
+//   {
+//     fullname: "Aarav Mehta",
+//     image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
+//     profession: "Full Stack Developer",
+//     description: "Passionate about building scalable web applications and exploring new JavaScript frameworks.",
+//     tags: ["JavaScript", "React", "Node.js", "MongoDB"]
+//   },
+//   {
+//     fullname: "Sofia Williams",
+//     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+//     profession: "UI/UX Designer",
+//     description: "Designing intuitive and beautiful user experiences with a focus on accessibility.",
+//     tags: ["Figma", "Adobe XD", "User Research", "Prototyping"]
+//   },
+//   {
+//     fullname: "Liam Johnson",
+//     image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d",
+//     profession: "Data Scientist",
+//     description: "Turning data into actionable insights using machine learning and statistical analysis.",
+//     tags: ["Python", "Machine Learning", "Pandas", "AI"]
+//   },
+//   {
+//     fullname: "Emily Brown",
+//     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80",
+//     profession: "Digital Marketer",
+//     description: "Helping brands grow through data-driven marketing strategies and social media campaigns.",
+//     tags: ["SEO", "Content Marketing", "Google Ads", "Analytics"]
+//   },
+//   {
+//     fullname: "Noah Martinez",
+//     image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2",
+//     profession: "Cybersecurity Analyst",
+//     description: "Focused on securing systems and protecting organizations from digital threats.",
+//     tags: ["Network Security", "Ethical Hacking", "Risk Assessment", "Cloud Security"]
+//   },
+//   {
+//     fullname: "Isabella Clark",
+//     image: "https://images.unsplash.com/photo-1544723795-3fb6469f5b39",
+//     profession: "Mobile App Developer",
+//     description: "Building high-performance cross-platform mobile apps with modern technologies.",
+//     tags: ["Flutter", "React Native", "Android", "iOS"]
+//   },
+//   {
+//     fullname: "Ethan Walker",
+//     image: "https://images.unsplash.com/photo-1527980965255-d3b416303d12",
+//     profession: "DevOps Engineer",
+//     description: "Automating deployments and managing cloud infrastructure for scalable systems.",
+//     tags: ["AWS", "Docker", "Kubernetes", "CI/CD"]
+//   },
+//   {
+//     fullname: "Olivia Davis",
+//     image: "https://images.unsplash.com/photo-1554151228-14d9def656e4",
+//     profession: "Content Creator",
+//     description: "Creating engaging digital content focused on tech, productivity, and lifestyle.",
+//     tags: ["YouTube", "Blogging", "Video Editing", "Brand Strategy"]
+//   }
+// ];
 
-var sum= ''
-users.forEach((val)=>{
-    sum += `<div class="card">
-            <img src=${val.image} alt="">
-            <h3>${val.fullname}</h3>
-            <h4>${val.profession}</h4>
-            <p>${val.description}</p>
-        </div>`
-})
+// var sum= ''
+// users.forEach((val)=>{
+//     sum += `<div class="card">
+//             <img src=${val.image} alt="">
+//             <h3>${val.fullname}</h3>
+//             <h4>${val.profession}</h4>
+//             <p>${val.description}</p>
+//         </div>`
+// })
 
-var main= document.querySelector('main')
-main.innerHTML= sum
+// var main= document.querySelector('main')
+// main.innerHTML= sum
 
 
+// -----------------------------------------------------------
+
+var box= document.querySelector('#box')
+
+// box.addEventListener('click', ()=>{
+//     console.log("click performed")
+// })
+
+// box.addEventListener('dblclick', ()=>{
+//     console.log("double click performed")
+// })
+
+// box.addEventListener('mouseenter', ()=>{
+//     console.log('mouse entered')
+// })
+
+// box.addEventListener('mouseleave', ()=>{
+//     console.log('mouse moved out')
+// })
+
+// var main= document.querySelector('#main')
+
+// main.addEventListener('mousemove',()=>{
+//     console.log('mouse moved')
+// })
+//the val which is passed in the function gives us all the details of the mousemove event.
+// main.addEventListener('mousemove',(val)=>{
+//     console.log(val)
+// })
+
+// var main= document.querySelector('#main')
+// var cursor= document.querySelector('#cursor')
+
+
+// main.addEventListener('mousemove', (val)=>{
+//     cursor.style.left= val.x + 'px'
+//     cursor.style.top= val.y + 'px'
+// })

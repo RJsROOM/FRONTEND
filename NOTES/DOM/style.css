@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #fff;
+    color: black;
+    font-family: 'helevetica neue';
 }
 html,body{
     height: 100%;
@@ -158,7 +159,7 @@ button:active{
 /* ------------------------------------------------------------- */
 
 
-main{
+/* main{
     height: 100%;
     width: 100%;
     background-color: black;
@@ -186,7 +187,7 @@ main{
 }
 .card h3{
     font-size: 26px;
-    white-space: nowrap; /*this property is responsible for not letting our text go to another line */
+    white-space: nowrap; this property is responsible for not letting our text go to another line 
     color: steelblue;
 }
 .card h4{
@@ -198,4 +199,29 @@ main{
 .card p{
     color: black;
     font-size: 14px;
+} */
+
+
+/* ---------------------------------------------------------- */
+
+/* #box{
+    height: 200px;
+    width: 200px;
+    background-color: aquamarine;
+} */
+
+/* body{
+    cursor: none;
 }
+
+#main{
+    height: 100%;
+    width: 100%;
+    background-color: #333;
+}
+#cursor{
+    height: 30px;
+    position: fixed;
+    transform: translate(-50%, -50%);
+} */
+
