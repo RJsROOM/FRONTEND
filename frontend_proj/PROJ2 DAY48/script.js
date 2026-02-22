@@ -233,5 +233,53 @@ white21.addEventListener('click', ()=>{
 })
 
 
+document.body.addEventListener("keydown", (e) => {
+    const keyMap = {
+        KeyA: 0,
+        KeyS: 1,
+        KeyD: 2,
+        KeyF: 3,
+        KeyG: 4,
+        KeyH: 5,
+        KeyJ: 6,
+        KeyK: 7,
+        KeyL: 8,
+        KeyZ: 9,
+        KeyX: 10,
+        KeyC: 11,
+        KeyV: 12,
+        KeyB: 13,
+        KeyN: 14,
+        KeyM: 15,
+        KeyQ: 16,
+        KeyW: 17,
+        KeyE: 18,
+        KeyR: 19,
+        KeyT: 20,
+        KeyY: 21,
+        KeyU: 22,
+        KeyI: 23,
+        KeyO: 24,
+        KeyP: 25,
+        Digit1: 26,
+        Digit2: 27,
+        Digit3: 28,
+        Digit4: 29,
+        Digit5: 30,
+        Digit6: 31,
+        Digit7: 32,
+        Digit8: 33,
+        Digit9: 34,
+        Digit0: 35
+    };
+
+    const index = keyMap[e.code];
+    if (index !== undefined) {
+        aud[index].currentTime = 0;
+        aud[index].play();
+    }
+});
+
+
 
 
