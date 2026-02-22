@@ -232,3 +232,6 @@ white21.addEventListener('click', ()=>{
     aud[35].play()
 })
 
+
+
+
