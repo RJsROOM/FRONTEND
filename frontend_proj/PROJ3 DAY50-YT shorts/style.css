@@ -1,0 +1,115 @@
+body{
+    background-color: black;
+}
+main{
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right bottom, rgb(26,26,26), rgb(35,35,35));
+    padding: 20px;
+    overflow: auto;
+}
+section{
+    height: 100%;
+    width: 350px;
+    background-color: black;
+    border-radius: 10px;
+    margin: auto;
+}
+.all-reels{
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+.all-reels::-webkit-scrollbar{
+    display: none;
+}
+.reel{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+.reel video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.reel .bottom{
+    padding: 30px 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.899));
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+.bottom .user{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.bottom .user img{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.bottom .user h4{
+    font-size: 15px;
+    font-weight: 500;
+}
+.bottom .user button{
+    background-color: transparent;
+    padding: 2px 4px;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 2px;
+    border: 1px solid white;
+}
+.bottom>h3{
+    font-weight: 500;
+    font-size: 19px;
+}
+
+
+.right{
+    padding: 10px;
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    position: absolute;
+    right: 0;
+    /* height: 100%; */
+    /* transform: translateX(100%); */
+    bottom: 12%;
+    border-radius: 10px;
+    /* background: linear-gradient(to right, transparent, rgba(0,0,0,0.284)); */
+}
+.right h4{
+    cursor: pointer;
+}
+.right i{
+    font-size: 25px;
+    font-weight: 500;
+}
+.right h6{
+    font-size: 17px;
+    font-weight: 500;
+}
+.right>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.love{
+    color: rgb(232, 30, 87);
+}
