@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    color: beige;
+    background-color: black;
+    font-family: 'helvetica neue';
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* radial gradient and linear gradient */
+
+/* .box{
+    height: 400px;
+    width: 400px;
+    border: 1px solid crimson;
+    "in oklab and hsl" are two extra properties for gradients
+    background: linear-gradient(in oklab to right, white, red, pink);;
+    1st parameter in radial gradient tells the radius of the circle. and "at 150px 150px" is the coordinates of the center of the radial gradient's circle
+    background: radial-gradient(300px at 150px 120px, yellow, orange, red);
+    margin: 20px;
+    border-radius: 10px;
+}  */
+
+/* css custom variables/css root variables */
+
+:root{
+    --red:rgb(149, 255, 0);
+    --x: 600px;
+    --y: 200px;
+}
+/* with only css file */
+
+/* .body{
+    background: url(https://images.unsplash.com/photo-1760444190286-ce5514c8cedd?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bGFuZHNjYXBlJTIwanVuZ2xlJTIwdmlld3xlbnwwfHwwfHx8MA%3D%3D);
+    background-size: cover;
+} */
+/* .box{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background:var(--red);
+    background: radial-gradient(in hsl 200px at var(--x) var(--y), rgba(243, 245, 243, 0.008), rgba(29, 78, 70, 0.358) , rgba(8, 8, 8, 0.971)); 
+} */
+
+
+/* with html img tag */
+
+.box{
+    position: relative;
+}
+.box div{
+    position: absolute;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 12px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: aqua;
+    font-size: 30px;
+    background: radial-gradient(grey 30%, black);
+}
+.box img{
+    width: 100vw;
+    height: 100vh;
+}
+.box::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(in hsl 200px at var(--x) var(--y), rgba(243, 245, 243, 0.008), rgba(29, 78, 70, 0.358) , rgba(8, 8, 8, 0.971));
+    pointer-events: none;
+}
+
+
+
