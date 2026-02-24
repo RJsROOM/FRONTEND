@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes changeBackground{
+    from{
+        background-color: rgba(255, 255, 255, 0.486);
+        scale: 1;
+    }
+
+    to{
+        background-color: rgb(8, 7, 2);
+        border-radius: 25px;
+        scale: 1.5;
+    }
+}
+
+.box{
+    height: 400px;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.486);
+    box-shadow: inset 0 0 40px aquamarine;
+    border-radius: 8px;
+    animation: changeBackground 1.5s infinite alternate;
+    /*x | y | spread radius | color and inset works only on box-shadow and is used to apply shadow on the inner side*/
+}
+
+h1{
+    font-size: 2rem;
+    margin-top: 50%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-shadow: 0 0 5px rgb(144, 222, 36);
+    color: rgba(11, 178, 169, 0.785);
+}
+
