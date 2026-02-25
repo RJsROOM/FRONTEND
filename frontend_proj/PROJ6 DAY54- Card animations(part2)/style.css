@@ -33,22 +33,36 @@ body{
 }
 
 .box{
-    max-width: 300px;
+    max-width: 350px;
     padding-inline: 10px;
     padding-bottom: 10px;
     color: antiquewhite;
     display: flex;
     flex-direction: column;
     gap: 8px;
-    box-shadow: 0 0 90px rgb(3, 170, 170);
+    box-shadow: 0 0 0px rgb(3, 170, 170);
     border-radius: 15px;
     background: 
         linear-gradient(to top right, black) padding-box,
         conic-gradient(from var(--rotate), black, rgb(3, 170, 170), rgba(0, 0, 0, 0.979)) border-box;
-    border: 5px solid transparent;
-    animation: borderRotate 4s;
+    border: 0px solid transparent;
+    animation: borderRotate 3s;
     animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-play-state: paused;
+    transition: all 0.4s linear;
+    text-shadow: 0 0 0px rgb(3, 170, 170);
+    color: whitesmoke;
 }
+
+.box:hover{
+    animation-play-state: running;
+    border-width: 5px;
+    box-shadow: 0 0 70px rgb(3, 170, 170);
+    text-shadow: 0 0 10px rgb(3, 170, 170);
+    color: rgb(3, 170, 170);
+}
+
 .box img{
     width: 100%;
 }
