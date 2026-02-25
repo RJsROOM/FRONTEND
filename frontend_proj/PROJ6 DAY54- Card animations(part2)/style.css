@@ -45,7 +45,7 @@ body{
     background: 
         linear-gradient(to top right, black) padding-box,
         conic-gradient(from var(--rotate), black, rgb(3, 170, 170), rgba(0, 0, 0, 0.979)) border-box;
-    border: 5px solid rgba(0, 0, 0, 0);
+    border: 5px solid transparent;
     animation: borderRotate 4s;
     animation-iteration-count: infinite;
 }
