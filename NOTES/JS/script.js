@@ -370,3 +370,28 @@ on the othe rhand,
 
 */
 
+// ----------------------------------------------------------------
+
+// OBJECT-ORIENTED PROGRAMMING WITH JAVASCRIPT- DAY56
+
+/*  
+PROTOTYPE is a keyword which is applied on the classes for the shared memory prupose. suppose we've created a class named cars and we all know that in the class car we might have created engineOn and engineOff like functions which is generally present in all the cars we will create, so in order to save some space by writing these functions in all the cars we create the shared memory of these functions.
+like- 
+class car{
+    constructor(name, color){
+        this.name=name;
+        this.color=color
+    }
+}
+car.prototype.engineOn= ()=>{
+        console.log("engine is on now")
+    }
+car.prototype.engineOff= ()=>{
+        console.log("engine is off now")
+    }
+
+let car1= new car("chevrolet", "white")
+let car2= new car("porsche", "purple")
+
+*/
+
