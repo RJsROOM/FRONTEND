@@ -374,8 +374,35 @@ on the othe rhand,
 
 // OBJECT-ORIENTED PROGRAMMING WITH JAVASCRIPT- DAY56
 
-/*  
+/* 
+constructors are the functions which run automatically and which we create to store the default values of the data of our class.
+the value of constrcutor remains same for any number of instance we create in the future.(instance is like car1 and car2 fromm the below examples.)
+
+classes are basically the blueprints which is used to create the new objects whenever we run it and create the new instances.classe's name must begin with capital letters.
+also whenever we use the class the "new" keyword we use is used to create the blank objects and that blank object is then pointed by the "this" keyword of the contructor. Remember that the pointing functionalty of "this" keyword changes at different places of use.
+values of "this" with different usecases----
+    1. global: window
+    2. function: window
+    3. es5 func inside and object: object
+        let obj={
+            name: "RJsROOM",
+            func: function(){
+                console.log(this.name)   this will give the obj's results asked.
+            }
+        }
+    4. es6 func inside an obj: window
+        let obj={
+            name: "RJsROOM",
+            func: ()=>{
+                console.log(this.name)   this will give window as result.
+            }
+        }
+    5. es5 function inside an des5 func inside an obj: window
+    6. es6 func inside an es5 func inside an obj: object
+
 PROTOTYPE is a keyword which is applied on the classes for the shared memory prupose. suppose we've created a class named cars and we all know that in the class car we might have created engineOn and engineOff like functions which is generally present in all the cars we will create, so in order to save some space by writing these functions in all the cars we create the shared memory of these functions.
+prototypes are also automatically created whether we separate it from the class or not. the JS we use always splits all the functionalities we create outside of the constructors as prototypes.
+because the contructors are considered the only original data and else are considered the shared data.
 like- 
 class car{
     constructor(name, color){
@@ -393,5 +420,40 @@ car.prototype.engineOff= ()=>{
 let car1= new car("chevrolet", "white")
 let car2= new car("porsche", "purple")
 
+
+call/apply/bind
+since we know that the value of "this" keyword in a function is the window object.
+but if we dont want that "This" should point to window but instead to an obj then we use call/apply/bind.
+like-
+1. let obj={
+    name: "abs",
+}
+
+function abcd(x,y,z){
+    console.log(this,x,y,z);
+}
+abcd.call(obj,1,2,3); 
+in this the value of "this" will point to the obj and output will be name: abs. and the value after that will be passed in the function's parameter.
+
+2. let obj={
+    name: "abs",
+}
+
+function abcd(x,y,z){
+    console.log(this,x,y,z);
+}
+abcd.apply(obj,[1,2,3]);
+the only change in call and apply is that the arguments are wrapped in an array format in apply.
+
+3. let obj={
+    name: "abs",
+}
+
+function abcd(x,y,z){
+    console.log(this,x,y,z);
+}
+let newfnc= abcd.bind(obj,1,2,3);
+newfnc();
+the bind is similar to call but instead of self running the bind gives us a function in return which we have to store in a variable and call it whenever we need it.
 */
 
