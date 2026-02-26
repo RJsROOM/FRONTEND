@@ -372,7 +372,7 @@ on the othe rhand,
 
 // ----------------------------------------------------------------
 
-// OBJECT-ORIENTED PROGRAMMING WITH JAVASCRIPT- DAY56
+// OBJECT-ORIENTED PROGRAMMING WITH JAVASCRIPT-
 
 /* 
 constructors are the functions which run automatically and which we create to store the default values of the data of our class.
@@ -456,4 +456,98 @@ let newfnc= abcd.bind(obj,1,2,3);
 newfnc();
 the bind is similar to call but instead of self running the bind gives us a function in return which we have to store in a variable and call it whenever we need it.
 */
+
+// ------------------------------------------------------------------
+
+// some practice uestions-
+
+/* 1. create a user object that stores name and email and has a login mehtod which prints "user logged in".
+let user={
+    name: "Rakshit",
+    email: "rakshit@g.com",
+    login: ()=>{
+        console.log("user logged in")
+    }
+}
+user.login();
+
+OR,
+
+class user{
+    constructor(name, email){
+        this.name=name;
+        this.email=email;
+    }
+    login(){
+        console.log("user logged in")
+    }
+}
+
+let user1= new user("Rakshit", "rakshit@g.com");
+let user2= new user("krishna", "krishna@g.com");
+let user3= new user("osama", "osama@h.com");
+let user4= new user("adarshan", "adarsh@g.com");
+
+user1.login();
+user2.login();
+user3.login();
+user4.login();
+
+2. create a product class that stores name and price and has a method which returns the final price after discount.
+class product{
+    constructor(name,price){
+        this.name=name;
+        this.price=price;
+    }
+    finalPrice(){
+        let discount=10;
+        let finalP= this.price - (this.price*discount)/100;
+        return finalP;
+    }
+}
+
+let product1= new product("amul doodh", 35);
+console.log(product1.finalPrice());
+
+3. create two car objects with the following:
+    brand and speed
+    a drive mehtod that prints the car brand and speed
+class car{
+    constructor(brand,speed){
+        this.brand=brand;
+        this.speed=speed;
+    }
+    drive(){
+        console.log(`cars from ${this.brand} run at an avg. speed of ${this.speed}kmph`)
+    }
+}
+let car1= new car("Porche", 150);
+let car2= new car("Lamborghini", 220)
+car1.drive();
+car2.drive();
+
+4. create a student class that accepts name and roll no and add a method introduce which displays these properties.
+class student{
+    constructor(name, rollno){
+        this.name=name;
+        this.rollno=rollno;
+    }
+    introduce(){
+        console.log(`${this.name} roll no. ${this.rollno}`)
+    }
+}
+
+let student1= new student("Rakshit", 21);
+student1.introduce();
+
+NOTE:- 
+we can create a contructor without using the classes. before the es6 versions(before the concept of class) the constructors were created like this-
+function Animal(){
+    this.name= "rakshit"
+}
+let h1= new Animal();
+*/
+
+
+
 
