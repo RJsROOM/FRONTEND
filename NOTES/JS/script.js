@@ -551,3 +551,28 @@ let h1= new Animal();
 
 
 
+// -------------------------------------------------------------------
+
+/*
+since JS is a single threaded language, means it works in the hierarchical order of work. the first come basis. and this approach is called synchronous aproach. let's see the how we can use the asynchronous JS.
+
+callbacks are those functions which don't run frequently and only run when some work is done. like-
+setTimeout(()->{}, 2000)
+this is also a callback function which doesn't run at the same time we call it, it runs after the wait of 2000ms(2sec) which is it's work.
+
+the callbacks are sometimes very tedious and they make a lopp-hole of functions under functions which becomes the callback hell. to solev this we have promises and sync-await in JS .
+simply when we call a functions we can also pass another functions into it in the argument but we just have to accept it in the parameter where that function was created.
+like-
+function abcd(fn){
+    fn(function(){})
+}
+
+abcd(function(fn2){
+    fn2();
+})
+
+
+*/
+
+
+
