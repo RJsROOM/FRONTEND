@@ -571,8 +571,64 @@ abcd(function(fn2){
     fn2();
 })
 
+practice questions----
 
+1. make one function afterDelay which accepts two things-time and a callback function. we have to print a message "callback executed" when that callback runs after a specified time...
+function afterDelay(time, fn){
+    setTimeout(()=>{
+        fn();    
+    },2000)
+}
+afterDelay(2, ()=>{
+        console.log("Callback executed");
+    })
+
+2. make one function getUser. take username and a cb which runs after 1 sec and gives one object to the cb {object contains id and username}. then, inside the callback function call another function getUserPosts which takes userId and a cb. after 2 sec that cb recieves two posts in it. the final output should be like-
+username and its posts...
+function getUser(username, cb){
+    console.log("getting user details...")
+    setTimeout(()=>{
+        cb({id: 1, username: "rj"});    
+    },1000)
+}
+function getUserPosts(id, cb){
+    console.log("getting user posts...")
+    setTimeout(()=>{
+        cb(["hello", "chal bhaag"])    
+    },2000)
+}
+
+getUser("rj", (data)=>{
+    getUserPosts(1, (allposts)=>{
+        console.log(data.username, allposts)    
+    })
+})
+
+3. make 3 functions loginUser, fetchPermisssions and loadDashboard.
+loginUser- after 1 sec user gives an object to the cb.
+fetchPermissions- accepts userId and after 2 sec gives permissions array to the cb.
+loadDashboard- takes permission and after 3 sec prints "dashboard loaded" is passed into the cb.  [this sometimes becomes callback-hell]..
+function getUser(username, cb){
+    console.log("getting user details...")
+    setTimeout(()=>{
+        cb({id: 1, username: "rj"});    
+    },1000)
+}
+function getUserPosts(id, cb){
+    console.log("getting user posts...")
+    setTimeout(()=>{
+        cb(["hello", "chal bhaag"])    
+    },2000)
+}
+
+getUser("rj", (data)=>{
+    getUserPosts(1, (allposts)=>{
+        console.log(data.username, allposts)    
+    })
+})
 */
+
+
 
 
 
