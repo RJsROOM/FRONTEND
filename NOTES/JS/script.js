@@ -629,7 +629,7 @@ getUser("rj", (data)=>{
 */
 
 // ---------------------------------------------------------------------
-/*  
+/* primises and async-await 
 
 promises are functions which tell us that whatever writeen inside has to be done. depending on the state in which our function is working it gives us the outputs. there are 3 states of our functions-- 1. pending(when the working is in process) 2. resolved 3. reject
 if the promise runs and gives an output then .then is initiated else .catch
@@ -687,6 +687,52 @@ async function abcd(){
     console.log(v);
 }
 abcd();
+
+
+*/
+// --------------------------------------------------------------------
+/* error handling
+
+since we know that error are those misspelled words or uninitialised variables or objects or something which doesn't exist..these blunders create the errors and when an error occurs the further code stops executing.
+Types of errors are- 1.syntax errors(the format of the code section is wrong or you've written wrong code) 2.runtime errors(these errors occur when the function is processed and something which do not exist is being called in that function) 3. logical errors(the logic of our code should've done something else but the results we are seeing is not expected.)
+
+to prevent the code crashing of our code we use try-catch methods. like-
+try{
+    console.log(a.name.age)
+}catch(err){
+    console.error(err)
+}
+console.log("hyeehyeee")
+
+the error has basically three objects: message, name and stack. these can be accessed through the err we were recieving in the catch. like-
+try{
+    console.log(a.name.age)
+}catch(err){
+    console.error(err.message)
+    console.error(err.name)
+    console.error(err.stack)
+}
+
+try-catch-finally the finally runs in both the cases either our try runs or the error runs the finally will always run.
+eg.
+try{}
+    let a=12;
+    console.log(a);
+}catch(err){
+    console.error(err)
+}finally{
+    console.log("i will run always")
+}
+
+
+custom errors-
+try{
+    let a=12
+    console.log(a.name.age);
+}catch(err){
+    console.error(new Error("Invalid input was given by yiur side.."))
+}
+
 
 
 */
