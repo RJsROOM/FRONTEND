@@ -628,3 +628,67 @@ getUser("rj", (data)=>{
 })
 */
 
+// ---------------------------------------------------------------------
+/*  
+
+promises are functions which tell us that whatever writeen inside has to be done. depending on the state in which our function is working it gives us the outputs. there are 3 states of our functions-- 1. pending(when the working is in process) 2. resolved 3. reject
+if the promise runs and gives an output then .then is initiated else .catch
+
+fetch() method helps us to go to any url for the data. the data which we get is not readable so for this we convert it into json.
+
+async-await are the functions which are only used with promises like functions.awaits are 90% written inside a function where await is written before the promise function and async is written before the name of the parent function..
+
+eg. 1.
+const prm= new Promise((resolve, reject)=>{
+    setTimeout(()=>{
+        resolve();
+    })
+})
+
+prm
+    .then(()=>{
+        cosnole.log("hyeeee")
+    })
+    .catch(()=>{
+        console.log("byeeee")    
+    })
+
+2.
+fetch(`https://randomuser.me/api/`)
+.then((unreadableData)=> unreadableData.json())
+.then((readableData)=>{
+    console.log(readableData.results[0].name.first)
+})
+.catch((err)=>{
+    console.log(err)
+})
+
+3.
+async function abcd(){
+    let raw= await fetch(`https://randomuser.me/api/`);
+    let data= await raw.json();
+    console.log(data.results[0].name.first)
+}
+abcd();
+
+4.
+function Rnum(){
+    return new Promise((resolve, reject)=>{
+        setTimeout(()=>{
+            let num= Math.floor(Math.random()*10)
+            if(num>5) resolve(true);
+            else reject(false);
+        },1000)
+    })
+}
+
+async function abcd(){
+    let v= await Rnum();
+    console.log(v);
+}
+abcd();
+
+
+*/
+
+
