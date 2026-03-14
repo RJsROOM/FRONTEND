@@ -732,9 +732,59 @@ try{
 }catch(err){
     console.error(new Error("Invalid input was given by yiur side.."))
 }
+*/
+
+// ------------------------------------------------------------------
+/*
+PRACTICE 1 - WEATHER DASHBOARD WITH ERROR HANDLING
+    - build a small weather dashboard that fetches current weather data from any public weather API(such as OpenWeatherMap)
+    - you must make the API request asynchronously using the fetch with async-await.
+    - if the API rwquest fails, you must handle the error using try-catch
+    - additional, create and throw custom errors based on weather conditions.
+
+async function getWeather(city){
+    try{
+        let apikey= `37ff55346e69f04df525b6036d5bb868`;
+
+        let raw= await fetch(
+            `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}`
+        );
+        //if the response from api is correct then the value of OK is true else it comes as false.
+        if(!raw.ok){
+            throw new Error("city not found or,soemthing went wrong") 
+        }
+
+        let realData= await raw.json();
+        if(realData.main.temp>340){
+            console.warn(`It's very hot in ${city}.`)
+        }else if(realData.main.temp<273){
+            console.warn(`it's too cold in ${city}: ${realData.main.temp}K`)
+        }
+        console.log(realData);
+    }catch(err){
+        console.error(err.message)
+    }
+}
+getWeather("arctic");
 
 
+PRACTICE 2 - BULK EMAIL SENDING SIMULATION WITH PARALLEL PROMISES AND ERROR HANDLING.
+    - think of a scenario where you must simulate sending bulk emails to 5 users.
+    - treat each email sending operation as promise(you may simulate it using setTimeout).
+    - all emails must be sent in parallel using promise.all
+    - if any email fails(due to any error), you must catch the error and show which email was failed.
+    - in addition, use finally block to display a message indicating that "email process is complete."
 
 */
 
+function sendEmail(email){
+    return new Promise((resolve, reject)=>{
+        let time= Math.floor(Math.random()*5);
 
+        setTimeout(()=>{
+            let Rnum= Math.floor(Math.random()*10);
+            if(Rnum<5) resolve("Email sent successfully..")
+            else reject("Email not sent..")
+        }, time*1000)
+    })
+}
