@@ -777,14 +777,4 @@ PRACTICE 2 - BULK EMAIL SENDING SIMULATION WITH PARALLEL PROMISES AND ERROR HAND
 
 */
 
-function sendEmail(email){
-    return new Promise((resolve, reject)=>{
-        let time= Math.floor(Math.random()*5);
 
-        setTimeout(()=>{
-            let Rnum= Math.floor(Math.random()*10);
-            if(Rnum<5) resolve("Email sent successfully..")
-            else reject("Email not sent..")
-        }, time*1000)
-    })
-}
