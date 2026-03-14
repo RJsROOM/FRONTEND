@@ -776,5 +776,47 @@ PRACTICE 2 - BULK EMAIL SENDING SIMULATION WITH PARALLEL PROMISES AND ERROR HAND
     - in addition, use finally block to display a message indicating that "email process is complete."
 
 */
+// ---------------------------------------------------------------
+/*
+DEBOUNCING AND THROTTLING
+
+debouncing is the concept which gives us the results after a specified time. like when we are searching anything the results don't show up frequently and when we stop writing then after few seconds the results start to show up, this delay in showing results after the user stops writing is fulfilled with the help of debouncing.
+eg.
+function debounce(fn, delay){
+    let timer;
+    return function(){
+        clearTimeout(timer);
+        timer= setTimeout(fn, delay);
+    }
+}
+document.querySelector("#search").addEventListener(
+    "input",
+    debounce(function(){
+        console.log("chal gaya..")
+    },500)
+)
+
+throttling is the concept which is applied when there is a continuous action performed but we want to delay the results by some time so that our application doesn't lag. like- when we are moving mouse on our sccreen and we are seeing the coordinates of x and y in it then the continuous action of mousemove gives spontaneous results which can lag our application in the build time, so to prevent it we use throttling, so that after a specified time only we can see the coordinates of our mouse. and when the action is topped the results also stop showing.
+eg.
+function throttle(fn, delay){
+    let last=0;
+    return function(){
+        const now= Date.now();
+        if(now-last >= delay){
+            last=now;
+            fn();
+        }
+    }
+}
+
+window.addEventListener(
+    "mousemove",
+    throttle(function(){
+        console.log("RJ")
+    },2000)
+)
+
+*/
+
 
 
