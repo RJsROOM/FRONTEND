@@ -48,12 +48,16 @@ html,body{
     background-color: var(--sec);
 }
 
+
+
 nav{
     position: fixed;
     width: 100%;
     height: 80px;
     background-color: var(--tri2);
 }
+
+
 
 section.allElems{
     height: 100%;
@@ -66,6 +70,11 @@ section.allElems{
     gap: 20px;
     position: absolute;
 }
+.allElems .todo h2{
+    color: black;
+}
+
+
 
 .elem{
     background-color: #FEBA17;
@@ -91,10 +100,11 @@ section.allElems{
     font-size: 30px;
     right: 5%;
 }
-
 .elem:active{
     scale: 0.95;
 }
+
+
 
 
 .fullElem{
@@ -102,15 +112,13 @@ section.allElems{
     width: 100%;
     background-color: var(--sec);
     padding: 30px;
-    font-size: 55px;
     display: none;
     position: absolute;
 }
-
 .back{
     position: absolute;
     right: 5%;
-    background-color: red;
+    background-color: var(--tri1);
     border-radius: 20px;
     padding: 15px 20px;
     border: none;
@@ -120,4 +128,33 @@ section.allElems{
 }
 .back:active{
     scale: 1.2;
+}
+
+
+
+.todo-fullpage{
+    display: block;
+}
+.todo-fullpage h2{
+    font-size: 65px;
+}
+.todo-fullpage .todo-container{
+    height: 85%;
+    width: 100%;
+    margin-top: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.todo-fullpage .todo-container .addTask{
+    width: 33%;
+    background-color: var(--tri2);
+    height: 100%;
+    border-radius: 20px;
+}
+.todo-fullpage .todo-container .allTask{
+    width: 65%;
+    background-color: var(--tri2);
+    height: 100%;
+    border-radius: 20px;
 }
