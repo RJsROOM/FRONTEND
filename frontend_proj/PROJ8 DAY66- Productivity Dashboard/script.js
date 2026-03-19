@@ -1,79 +1,84 @@
-function openCrads(){
-    var elems=document.querySelectorAll(".elem");
-    var fullElems= document.querySelectorAll(".fullElem");
-    var fullElemsBack= document.querySelectorAll(".fullElem .back")
+function openCrads() {
+    var elems = document.querySelectorAll(".elem");
+    var fullElems = document.querySelectorAll(".fullElem");
+    var fullElemsBack = document.querySelectorAll(".fullElem .back")
 
-    elems.forEach((elem)=>{
-    elem.addEventListener("click", ()=>{
-            fullElems[elem.id].style.display="block";
+    elems.forEach((elem) => {
+        elem.addEventListener("click", () => {
+            fullElems[elem.id].style.display = "block";
         })
     })
 
-    fullElemsBack.forEach((back)=>{
-        back.addEventListener("click", ()=>{
-            fullElems[back.id].style.display="none";
+    fullElemsBack.forEach((back) => {
+        back.addEventListener("click", () => {
+            fullElems[back.id].style.display = "none";
         })
     })
 }
 
 openCrads();
 
-let form= document.querySelector(".addTask form")
 
-let taskInput= document.querySelector(".addTask form input")
-let taskDetailsInput= document.querySelector(".addTask form textarea")
-let taskCheckbox= document.querySelector(".addTask form #check")
+function TodoList() {
+    let form = document.querySelector(".addTask form")
 
-let currentTask=[
-    {
-        task: "mandir jana h",
-        details: "sankat mochan",
-        checked: true
-    },
-    {
-        task: "badminton",
-        details: "kukkru-ankit ko call kro 4pm tk",
-        checked: true
-    },
-    {
-        task: "samaan lana h",
-        details: "tel or shampoo",
-        checked: false
-    },
-]
+    let taskInput = document.querySelector(".addTask form input")
+    let taskDetailsInput = document.querySelector(".addTask form textarea")
+    let taskCheckbox = document.querySelector(".addTask form #check")
 
-function renderTask(){
-    var allTask= document.querySelector(".allTask");
+    var currentTask = [];
 
-    var sum='';
+    if (localStorage.getItem('currentTask')) {
+        currentTask = JSON.parse(localStorage.getItem('currentTask'));
+    } else {
+        console.error('task list is empty');
+    }
 
-    currentTask.forEach((elem)=>{
-    sum+= `<div class="task">
+
+    function renderTask(){
+
+        var allTask = document.querySelector(".allTask");
+
+        var sum = '';
+
+        currentTask.forEach((elem, id) => {
+            sum += `<div class="task">
                 <h5>${elem.task} 
                     <span class=${elem.checked}>
                         Imp
                     </span>
                 </h5>
-                <button>Mark as complete</button>
+                <button id=${id}>Mark as complete</button>
             </div>`
-    })
+        })
 
-    allTask.innerHTML=sum;
-}
-renderTask();
+        allTask.innerHTML = sum;
 
+        localStorage.setItem('currentTask', JSON.stringify(currentTask))
 
-form.addEventListener("submit", (e)=>{
-    e.preventDefault();
-    currentTask.push(
-        {   
-        task: taskInput.value, 
-        details: taskDetailsInput.value, 
-        checked: taskCheckbox.value
-        }
-    )
+        var markAsCompleteBtn = document.querySelectorAll(".task button")
+        markAsCompleteBtn.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                currentTask.splice(btn.id, 1)
+                renderTask();
+            })
+        })
+    }
     renderTask();
-    form.reset();
-})
 
 
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        currentTask.push(
+            {
+                task: taskInput.value,
+                details: taskDetailsInput.value,
+                checked: taskCheckbox.value,
+            }
+        )
+        renderTask();
+        form.reset();
+    })
+}
+
+TodoList();
