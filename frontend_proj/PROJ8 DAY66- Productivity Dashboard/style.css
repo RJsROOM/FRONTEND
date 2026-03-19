@@ -131,7 +131,7 @@ section.allElems{
 }
 
 
-
+/* ----------------------------TODO LIST------------------------------ */
 
 .todo-fullpage h2{
     font-size: 65px;
@@ -271,4 +271,53 @@ section.allElems{
 }
 .task button:active{
     scale: 0.9;
+}
+
+
+/* -------------------------DAILY PLANNER---------------------------- */
+
+
+.daily-planner-fullpage h2{
+    font-size: 50px;
+    font-weight: 300;
+}
+.daily-planner-fullpage .day-planner{
+    background-color: var(--tri2);
+    height: 85%;
+    margin-top: 40px;
+    width: 100%;
+    border-radius: 15px;
+    padding: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    overflow: auto;
+}
+.daily-planner-fullpage .day-planner::-webkit-scrollbar{
+    display: none;
+}
+.daily-planner-fullpage .day-planner .day-planner-time{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 49%;
+    margin-bottom: 15px;
+}
+.day-planner .day-planner-time p{
+    position: absolute;
+    top: 10%;
+    left: 2%;
+    font-size: 18px;
+    color: var(--tri1);
+}
+.day-planner .day-planner-time input{
+    padding: 20px 40px;
+    width: 100%;
+    background-color: var(--sec);
+    border-radius: 5px;
+    border: none;
+    font-size: 32px;
+    padding-top: 34px;
+    outline: none;
 }
