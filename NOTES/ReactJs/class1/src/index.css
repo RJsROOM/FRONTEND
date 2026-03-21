@@ -1,0 +1,24 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,body{
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  color: aqua;
+}
+
+.nav{
+  background-color: brown;
+  padding: 20px;
+}
+.hero{
+  background-color: blueviolet;
+  padding: 20px;
+}
+.foot{
+  background-color: chartreuse;
+  padding: 20px;
+}
