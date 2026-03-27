@@ -1,5 +1,5 @@
 import React from 'react'
-import { createBrowserRouter, Route, RouterProvider, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import Courses from './pages/Courses'
 import Kodr from './pages/Kodr'
@@ -8,7 +8,6 @@ import Random from './pages/Random'
 import Footer from './components/Footer'
 
 const App = () => {
-
   return (
     <div>
       <Navbar />
