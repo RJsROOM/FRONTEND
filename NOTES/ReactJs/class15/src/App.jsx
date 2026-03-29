@@ -1,14 +1,22 @@
-import React from 'react'
-import Navbar from './components/Navbar'
-import Sections from './components/Sections'
-import Footer from './components/Footer'
+
+import { Route, Routes } from 'react-router-dom'
+import Home from './pages/Home'
+import Products from './pages/Products'
+import ProductDetails from './pages/ProductDetails'
+
 
 const App = () => {
+
+  
+
   return (
-    <div className='bg-zinc-500 w-full h-screen flex flex-col'>
-      <Navbar />
-      <Sections />
-      <Footer />
+    
+    <div>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/products' element={<Products />} />
+        <Route path='/products/:productId' element={<ProductDetails />} />
+      </Routes>
     </div>
   )
 }
