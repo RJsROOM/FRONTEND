@@ -139,3 +139,74 @@ function motivationalQuote() {
 }
 
 motivationalQuote();
+
+
+// ----------------------POMODORO TIMER------------------------------
+
+
+let timer= document.querySelector(".pomo-timer h1");
+let timerInterval=null;
+let startBtn= document.querySelector(".pomo-timer .start");
+let resetBtn= document.querySelector(".pomo-timer .reset");
+let pauseBtn= document.querySelector(".pomo-timer .pause");
+let session= document.querySelector(".pomo-fullpage .session");
+let isWorkSession=true;
+
+let totalSeconds= 25*60;
+
+function updateTimer(){
+    let minutes= Math.floor(totalSeconds/60);
+    let seconds=totalSeconds%60;
+
+    timer.innerHTML= `${minutes<10? '0'+minutes: minutes}:${seconds<10? '0'+seconds: seconds}`;
+}
+
+function startTimer(){
+    clearInterval(timerInterval);
+
+    if(isWorkSession){
+        timerInterval=setInterval(()=>{
+            if(totalSeconds>0){
+                totalSeconds--;
+                updateTimer();
+            }else{
+                isWorkSession=false;
+                clearInterval(timerInterval);
+                timer.innerHTML="05:00";
+                session.innerHTML="Break";
+                session.style.backgroundColor="var(--blue)";
+                totalSeconds=5*60;
+            }
+        },1000)
+    }else{
+        timerInterval=setInterval(()=>{
+            if(totalSeconds>0){
+                totalSeconds--;
+                updateTimer();
+            }else{
+                isWorkSession=true;
+                clearInterval(timerInterval);
+                timer.innerHTML="25:00";
+                session.innerHTML="Work Session";
+                session.style.backgroundColor="var(--green)";
+                totalSeconds=25*60;
+            }
+        },1000)
+    }
+}
+
+function pauseTimer(){
+    clearInterval(timerInterval);
+}
+
+function resetTimer(){
+    totalSeconds=25*60;
+    clearInterval(timerInterval);
+    updateTimer();
+}
+
+startBtn.addEventListener("click", startTimer);
+pauseBtn.addEventListener("click", pauseTimer);
+resetBtn.addEventListener("click", resetTimer)
+
+// the pause timer restarts from that last time because the value of totalseconds which already was deducted gets continued from that number only
