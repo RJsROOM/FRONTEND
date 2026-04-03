@@ -1,5 +1,4 @@
 apiKey='5fd9759914674e2894c121738260204'
-city='varanasi'
 
 
 function openCrads() {
@@ -221,11 +220,53 @@ pomodoroTimer();
 
 // ------------------------Weather Widget----------------------------
 
+city='varanasi'
+let data=null;
+
+let header1Time= document.querySelector('.header1 h1');
+let header1Date=document.querySelector('.header1 h2');
+
 async function weatherAPICall(){
     let response=await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`)
 
-    let data= await response.json()
-    console.log(data)
+    data= await response.json()
 }
-
 weatherAPICall();
+
+
+function dateTime(){
+    const daysOfWeek=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+
+    let date=new Date();
+    let dayOfWeek= daysOfWeek[date.getDay()]
+    let minutes = String(date.getMinutes()).padStart(2, '0') 
+    let hours = String(date.getHours()).padStart(2, '0');
+
+    if(hours>12){
+        header1Time.innerHTML=`${dayOfWeek} ${hours}:${minutes}PM`;
+    }else{
+        header1Time.innerHTML=`${dayOfWeek} ${hours}:${minutes}AM`;
+    }
+
+
+    function dateOfTheYear(){
+        const months=['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+        let data=new Date();
+        let date=String(data.getDate()).padStart(2,'0');     
+        let month=months[data.getMonth()];
+        let year=data.getFullYear();
+
+        header1Date.innerHTML=`${date} ${month} ${year}`;
+    }
+    dateOfTheYear();
+}
+setInterval(()=>{
+    dateTime();
+},1000)
+
+
+
+
+
+
