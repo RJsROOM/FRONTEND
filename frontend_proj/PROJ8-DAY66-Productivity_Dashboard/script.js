@@ -226,10 +226,22 @@ let data=null;
 let header1Time= document.querySelector('.header1 h1');
 let header1Date=document.querySelector('.header1 h2');
 
+let header2Temp= document.querySelector('.header2 h2');
+let header2Condition= document.querySelector('.header2 h4');
+let header2Humidity=document.querySelector('.header2 .humid');
+let header2Precip=document.querySelector('.header2 .precip');
+let header2Wind=document.querySelector('.header2 .wind');
+
 async function weatherAPICall(){
     let response=await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`)
 
-    data= await response.json()
+    data= await response.json();
+
+    header2Temp.innerHTML=`${data.current.temp_c}°C`;
+    header2Condition.innerHTML=data.current.condition.text;
+    header2Humidity.innerHTML=`Humidity: ${data.current.humidity}%`;
+    header2Precip.innerHTML=`Precipitation: ${data.current.precip_mm}%`;
+    header2Wind.innerHTML=`Wind: ${data.current.wind_kph} KpH`;
 }
 weatherAPICall();
 
@@ -243,9 +255,9 @@ function dateTime(){
     let hours = String(date.getHours()).padStart(2, '0');
 
     if(hours>12){
-        header1Time.innerHTML=`${dayOfWeek} ${hours}:${minutes}PM`;
+        header1Time.innerHTML=`${dayOfWeek} ${String(hours).padStart('2','0')}:${String(minutes).padStart('2','0')}PM`;
     }else{
-        header1Time.innerHTML=`${dayOfWeek} ${hours}:${minutes}AM`;
+        header1Time.innerHTML=`${dayOfWeek} ${String(hours).padStart('2','0')}:${String(minutes).padStart('2','0')}AM`;
     }
 
 
