@@ -1,4 +1,3 @@
-apiKey='5fd9759914674e2894c121738260204'
 
 
 function openCrads() {
@@ -220,65 +219,104 @@ pomodoroTimer();
 
 // ------------------------Weather Widget----------------------------
 
-city='varanasi'
-let data=null;
+function weatherWidget() {
+    apiKey = '5fd9759914674e2894c121738260204'
+    city = 'varanasi'
+    let data = null;
 
-let header1Time= document.querySelector('.header1 h1');
-let header1Date=document.querySelector('.header1 h2');
+    let header1Time = document.querySelector('.header1 h1');
+    let header1Date = document.querySelector('.header1 h2');
 
-let header2Temp= document.querySelector('.header2 h2');
-let header2Condition= document.querySelector('.header2 h4');
-let header2Humidity=document.querySelector('.header2 .humid');
-let header2Precip=document.querySelector('.header2 .precip');
-let header2Wind=document.querySelector('.header2 .wind');
+    let header2Temp = document.querySelector('.header2 h2');
+    let header2Condition = document.querySelector('.header2 h4');
+    let header2Humidity = document.querySelector('.header2 .humid');
+    let header2Precip = document.querySelector('.header2 .precip');
+    let header2Wind = document.querySelector('.header2 .wind');
 
-async function weatherAPICall(){
-    let response=await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`)
+    async function weatherAPICall() {
+        let response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`)
 
-    data= await response.json();
+        data = await response.json();
 
-    header2Temp.innerHTML=`${data.current.temp_c}°C`;
-    header2Condition.innerHTML=data.current.condition.text;
-    header2Humidity.innerHTML=`Humidity: ${data.current.humidity}%`;
-    header2Precip.innerHTML=`Precipitation: ${data.current.precip_mm}%`;
-    header2Wind.innerHTML=`Wind: ${data.current.wind_kph} KpH`;
-}
-weatherAPICall();
-
-
-function dateTime(){
-    const daysOfWeek=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-
-    let date=new Date();
-    let dayOfWeek= daysOfWeek[date.getDay()]
-    let minutes = String(date.getMinutes()).padStart(2, '0') 
-    let hours = String(date.getHours()).padStart(2, '0');
-
-    if(hours>12){
-        header1Time.innerHTML=`${dayOfWeek} ${String(hours).padStart('2','0')}:${String(minutes).padStart('2','0')}PM`;
-    }else{
-        header1Time.innerHTML=`${dayOfWeek} ${String(hours).padStart('2','0')}:${String(minutes).padStart('2','0')}AM`;
+        header2Temp.innerHTML = `${data.current.temp_c}°C`;
+        header2Condition.innerHTML = data.current.condition.text;
+        header2Humidity.innerHTML = `Humidity: ${data.current.humidity}%`;
+        header2Precip.innerHTML = `Precipitation: ${data.current.precip_mm}%`;
+        header2Wind.innerHTML = `Wind: ${data.current.wind_kph} KpH`;
     }
+    weatherAPICall();
 
 
-    function dateOfTheYear(){
-        const months=['January','February','March','April','May','June','July','August','September','October','November','December'];
+    function dateTime() {
+        const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
-        let data=new Date();
-        let date=String(data.getDate()).padStart(2,'0');     
-        let month=months[data.getMonth()];
-        let year=data.getFullYear();
+        let date = new Date();
+        let dayOfWeek = daysOfWeek[date.getDay()]
+        let minutes = String(date.getMinutes()).padStart(2, '0')
+        let hours = String(date.getHours()).padStart(2, '0');
 
-        header1Date.innerHTML=`${date} ${month} ${year}`;
+        if (hours > 12) {
+            header1Time.innerHTML = `${dayOfWeek} ${String(hours).padStart('2', '0')}:${String(minutes).padStart('2', '0')}PM`;
+        } else {
+            header1Time.innerHTML = `${dayOfWeek} ${String(hours).padStart('2', '0')}:${String(minutes).padStart('2', '0')}AM`;
+        }
+
+
+        function dateOfTheYear() {
+            const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+            let data = new Date();
+            let date = String(data.getDate()).padStart(2, '0');
+            let month = months[data.getMonth()];
+            let year = data.getFullYear();
+
+            header1Date.innerHTML = `${date} ${month} ${year}`;
+        }
+        dateOfTheYear();
     }
-    dateOfTheYear();
+    setInterval(() => {
+        dateTime();
+    }, 1000)
 }
-setInterval(()=>{
-    dateTime();
-},1000)
+
+weatherWidget();
 
 
+// ------------------------Change Theme----------------------------
 
+function changeTheme() {
+    let theme = document.querySelector(".theme");
+    let rootElement = document.documentElement;
+    let flag = 0;
 
+    theme.addEventListener("click", () => {
+        if (flag == 0) {
+            rootElement.style.setProperty('--pri', '#D2C1B6');
+            rootElement.style.setProperty('--sec', '#1B3C53');
+            rootElement.style.setProperty('--tri1', '#456882');
+            rootElement.style.setProperty('--tri2', '#234C6A');
+            flag = 1;
+        } else if (flag == 1) {
+            rootElement.style.setProperty('--pri', '#F5D2D2');
+            rootElement.style.setProperty('--sec', '#F8F7BA');
+            rootElement.style.setProperty('--tri1', '#BDE3C3');
+            rootElement.style.setProperty('--tri2', '#A3CCDA');
+            flag = 2;
+        } else if (flag == 2) {
+            rootElement.style.setProperty('--pri', '#EFF5D2');
+            rootElement.style.setProperty('--sec', '#556B2F');
+            rootElement.style.setProperty('--tri1', '#C6D870');
+            rootElement.style.setProperty('--tri2', '#8FA31E');
+            flag = 3;
+        } else {
+            rootElement.style.setProperty('--pri', '#F8F4E1');
+            rootElement.style.setProperty('--sec', '#3e1a01');
+            rootElement.style.setProperty('--tri1', '#FEBA17');
+            rootElement.style.setProperty('--tri2', '#74512D');
+            flag = 0;
+        }
+    })
+}
 
+changeTheme();
 
