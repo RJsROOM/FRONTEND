@@ -650,8 +650,10 @@ header .header2 h3 {
 .allElems .allFeatures {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+  padding: 0 50px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -659,7 +661,7 @@ header .header2 h3 {
   flex-wrap: wrap;
   -webkit-box-align: start;
   -ms-flex-align: start;
-  align-items: flex-start;
+  align-items: center;
 }
 .allElems .todo h2 {
   color: black;
