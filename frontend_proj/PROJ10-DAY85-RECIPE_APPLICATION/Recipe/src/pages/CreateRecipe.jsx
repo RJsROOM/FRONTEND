@@ -1,14 +1,24 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useForm } from 'react-hook-form'
 import { nanoid } from 'nanoid'
+import { recipecontext } from '../context/RecipeContext'
 
 const CreateRecipe = () => {
 
-    const { register, handleSubmit } = useForm()
+    const {data, setData}=useContext(recipecontext)
 
-    const submitHandler= (data)=>{
-        data.id=nanoid()
-        console.log(data);
+    const { register, handleSubmit, reset } = useForm()
+
+    const submitHandler= (recipe)=>{
+        recipe.id=nanoid()
+
+        // const copydata=[...data]
+        // copydata.push(recipe)
+        // setData(copydata) OR..
+
+        setData([...data, recipe])
+
+        reset();
     }
 
   return (
