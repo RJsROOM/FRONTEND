@@ -32,11 +32,10 @@ const CreateRecipe = () => {
     className='flex flex-col max-w-fit'>
 
         <input 
-        required
         className='border-b p-2 outline-0 block'
         type="text" 
         placeholder='Enter Chef Name' 
-        {...register("chef name")} />
+        {...register("chef")} />
 
 
         <input 
