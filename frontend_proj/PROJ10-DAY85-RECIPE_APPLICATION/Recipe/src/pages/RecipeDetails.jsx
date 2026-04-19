@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { recipecontext } from "../context/RecipeContext";
 import { useNavigate, useParams } from "react-router-dom";
 import { useForm } from "react-hook-form";
@@ -41,7 +41,15 @@ const RecipeDetails = () => {
     navigate("/recipes");
   };
 
-  // const { data } = useContext(recipecontext);
+  
+
+  useEffect(()=>{
+      
+  
+      return ()=>{
+        console.log("single recipe unmounted")
+      }
+    }, [])
 
   return recipe ? (
     <div className="w-full flex justify-between">
@@ -131,3 +139,10 @@ const RecipeDetails = () => {
 };
 
 export default RecipeDetails;
+
+/*
+in useEffect hook without the array we pass in last-- if we made changes the whole component was re-rendering and to stop this we put an empty array(called dependency array) at last so that the whole component not doesn't changes and only the required updation is occurred. 
+but if we put the recipe in the array it means that if we make any changes in the recipe return function then the whole recipe function gets updated and we get out of useEffect.
+
+
+*/
