@@ -32,7 +32,6 @@ const RecipeDetails = () => {
     copydata[index] = { ...copydata[index], ...newData };
     setData(copydata);
     toast.success("Recipe updated successfully!");
-    navigate("/recipes");
   };
 
   const deleteHandler = () => {
