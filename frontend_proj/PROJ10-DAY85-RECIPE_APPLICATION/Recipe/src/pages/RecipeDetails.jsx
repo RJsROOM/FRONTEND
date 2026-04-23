@@ -15,28 +15,30 @@ const RecipeDetails = () => {
 
   const { register, handleSubmit } = useForm({
     defaultValues:{
-      title: recipe.title,
-      image: recipe.image,
-      description: recipe.description,
-      chef: recipe.chef,
-      instructions: recipe.instructions,
-      ingredients: recipe.ingredients,
-      category: recipe.category
+      title: recipe?.title,
+      image: recipe?.image,
+      description: recipe?.description,
+      chef: recipe?.chef,
+      instructions: recipe?.instructions,
+      ingredients: recipe?.ingredients,
+      category: recipe?.category
     }
   });
 
-  const submitHandler = (newData) => {
+  const updateHandler = (newData) => {
     const index = data.findIndex((recipe) => params.id == recipe.id);
 
     const copydata = [...data];
     copydata[index] = { ...copydata[index], ...newData };
     setData(copydata);
+    localStorage.setItem('recipes', JSON.stringify(copydata))
     toast.success("Recipe updated successfully!");
   };
 
   const deleteHandler = () => {
     const filterdata = data.filter((r) => r.id != params.id);
     setData(filterdata);
+    localStorage.setItem('recipes', JSON.stringify(filterdata))
     toast.success("Recipe deleted successfully!");
     navigate("/recipes");
   };
@@ -62,7 +64,7 @@ const RecipeDetails = () => {
         />
       </div>
       <form
-        onSubmit={handleSubmit(submitHandler)}
+        onSubmit={handleSubmit(updateHandler)}
         className="flex flex-col max-w-fit w-1/2 p-2 bg-green-500 rounded-lg shadow-xl hover:scale-105 duration-500"
       >
         <input

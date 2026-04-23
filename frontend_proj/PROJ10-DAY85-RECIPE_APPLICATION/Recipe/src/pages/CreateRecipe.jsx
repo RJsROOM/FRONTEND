@@ -16,15 +16,16 @@ const CreateRecipe = () => {
     const submitHandler= (recipe)=>{
         recipe.id=nanoid()
 
-        // const copydata=[...data]
-        // copydata.push(recipe)
-        // setData(copydata) OR..
-
-        setData([...data, recipe])
+        const copydata=[...data]
+        copydata.push(recipe)
+        setData(copydata)
+        localStorage.setItem('recipes', JSON.stringify(copydata))
         toast.success("Recipe created successfully!")
         reset();
         navigate('/recipes')
     }
+
+    
 
   return (
     <form 

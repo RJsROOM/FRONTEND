@@ -18,6 +18,11 @@ const Navbar = () => {
         </NavLink>
 
         <NavLink 
+        className={(e)=> e.isActive && "text-green-700"} to='/fav'>
+            Favourites
+        </NavLink>
+
+        <NavLink 
         className={`px-4 py-2 rounded-xl bg-green-950 text-green-200 cursor-pointer active:scale-95
         ${(e)=> e.isActive && "text-green-400"}`} to='/create-recipe'>
             Create Recipe
