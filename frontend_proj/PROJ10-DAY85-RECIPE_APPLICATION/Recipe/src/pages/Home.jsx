@@ -247,7 +247,7 @@ const Home = () => {
       <DoodleSketch />
 
       <div className="relative z-10 mx-auto w-full max-w-400 px-[10%]">
-        <div className="relative isolate overflow-hidden rounded-[34px] border border-green-100/70 bg-gradient-to-br from-green-100 via-green-50 to-green-200 px-5 py-6 shadow-[0_24px_60px_rgba(22,101,52,0.16)] sm:px-8 sm:py-8 lg:px-12 lg:py-10">
+        <div className="relative isolate overflow-hidden rounded-[34px] border border-green-100/70 bg-linear-to-br from-green-400 via-green-50 to-green-600 px-5 py-6 shadow-[0_24px_60px_rgba(22,101,52,0.16)] sm:px-8 sm:py-8 lg:px-12 lg:py-10">
           <div className="absolute -left-16 top-16 h-40 w-40 rounded-full bg-green-300/55 blur-3xl" />
           <div className="absolute bottom-10 right-10 h-52 w-52 rounded-full bg-emerald-200/45 blur-3xl" />
           <div className="absolute right-10 top-10 hidden h-24 w-24 rounded-full border-8 border-green-100/60 bg-green-200/60 lg:block" />
