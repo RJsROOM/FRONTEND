@@ -100,7 +100,7 @@ const FavouriteCard = ({ recipe, onRemove }) => {
       to={`/recipes/details/${recipe.id}`}
       className="group block rounded-[28px] border border-green-100/80 bg-green-50/85 p-4 shadow-[0_14px_30px_rgba(22,101,52,0.08)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_20px_34px_rgba(22,101,52,0.14)]"
     >
-      <div className="relative overflow-hidden rounded-[24px]">
+      <div className="relative overflow-hidden rounded-3xl">
         <img
           className="h-60 w-full object-cover transition duration-500 group-hover:scale-105"
           src={recipe.image}
@@ -209,7 +209,7 @@ const Fav = () => {
                 </p>
               </div>
 
-              <div className="grid gap-4 sm:grid-cols-3 lg:w-[420px]">
+              <div className="grid gap-4 sm:grid-cols-3 lg:w-105">
                 {stats.map((item) => (
                   <div
                     key={item.label}
