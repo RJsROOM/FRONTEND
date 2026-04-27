@@ -107,7 +107,7 @@ const RecipeDetails = () => {
           <div className="space-y-5">
             <div className="rounded-[26px] border border-white/25 bg-white/10 p-3 shadow-lg">
               <img
-                className="h-[320px] w-full rounded-[18px] object-cover sm:h-[430px] lg:h-[540px]"
+                className="h-80 w-full rounded-[18px] object-cover sm:h-107.5 lg:h-135"
                 src={recipe.image}
                 alt={recipe.title}
               />
@@ -172,7 +172,7 @@ const RecipeDetails = () => {
         </div>
         <form
           onSubmit={handleSubmit(updateHandler)}
-          className="w-full rounded-[30px] border border-green-200 bg-white p-5 shadow-[0_20px_48px_rgba(22,101,52,0.14)] sm:p-6 xl:sticky xl:top-6 xl:w-[380px] xl:shrink-0"
+          className="w-full rounded-[30px] border border-green-200 bg-white p-5 shadow-[0_20px_48px_rgba(22,101,52,0.14)] sm:p-6 xl:sticky xl:top-6 xl:w-95 xl:shrink-0"
         >
           <div className="border-b border-green-100 pb-5">
             <p className="text-xs font-black uppercase tracking-[0.24em] text-green-700">
