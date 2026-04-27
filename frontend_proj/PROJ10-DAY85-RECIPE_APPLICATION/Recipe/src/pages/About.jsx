@@ -226,7 +226,7 @@ const About = () => {
                 <div className="absolute -top-6 left-8 hidden h-24 w-24 rounded-full bg-green-200/70 blur-2xl md:block" />
                 <div className="absolute -bottom-8 right-6 hidden h-28 w-28 rounded-full bg-emerald-100/70 blur-2xl md:block" />
 
-                <div className="relative overflow-hidden rounded-[32px] border border-green-100/80 bg-green-50/70 p-4 shadow-[0_20px_40px_rgba(22,101,52,0.16)]">
+                <div className="relative overflow-hidden rounded-4xl border border-green-100/80 bg-green-50/70 p-4 shadow-[0_20px_40px_rgba(22,101,52,0.16)]">
                   <div className="overflow-hidden rounded-[28px]">
                     <img
                       className="h-72 w-full object-cover sm:h-80 lg:h-96"
@@ -236,7 +236,7 @@ const About = () => {
                   </div>
 
                   <div className="mt-4 grid gap-4 sm:grid-cols-2">
-                    <div className="rounded-[24px] border border-green-100 bg-white/90 p-4 shadow-[0_10px_24px_rgba(22,101,52,0.08)]">
+                    <div className="rounded-3xl border border-green-100 bg-white/90 p-4 shadow-[0_10px_24px_rgba(22,101,52,0.08)]">
                       <p className="text-xs font-bold uppercase tracking-[0.24em] text-green-700">
                         Why It Feels Good
                       </p>
@@ -245,7 +245,7 @@ const About = () => {
                       </p>
                     </div>
 
-                    <div className="rounded-[24px] border border-green-100 bg-green-950 p-4 text-green-100 shadow-[0_16px_28px_rgba(20,83,45,0.2)]">
+                    <div className="rounded-3xl border border-green-100 bg-green-950 p-4 text-green-100 shadow-[0_16px_28px_rgba(20,83,45,0.2)]">
                       <p className="text-xs font-bold uppercase tracking-[0.24em] text-green-300">
                         Kitchen Note
                       </p>
@@ -277,7 +277,7 @@ const About = () => {
                 {recipeFlow.map((item) => (
                   <article
                     key={item.title}
-                    className="rounded-[24px] border border-green-100/80 bg-white/85 p-5 shadow-[0_12px_26px_rgba(22,101,52,0.08)]"
+                    className="rounded-3xl border border-green-100/80 bg-white/85 p-5 shadow-[0_12px_26px_rgba(22,101,52,0.08)]"
                   >
                     <div className="grid h-11 w-11 place-items-center rounded-2xl bg-green-950 text-xl text-green-100">
                       <i className={item.icon} />
