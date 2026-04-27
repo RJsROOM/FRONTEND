@@ -264,7 +264,7 @@ const Home = () => {
               </h1>
 
               <p className="mt-5 max-w-xl text-sm font-semibold text-gray-600 sm:text-base">
-                Browse Through Over 650,000 Tasty Recipes.
+                Browse Through Your close people's Tasty Recipes.
               </p>
 
               <div className="mt-7 flex flex-wrap gap-4">
@@ -338,10 +338,6 @@ const Home = () => {
                   Tasty highlights in your current theme
                 </h2>
               </div>
-
-              <p className="max-w-md text-sm font-semibold text-gray-600">
-                The layout follows the same homepage idea from your reference, but now it fits the mint-green style already used across your app.
-              </p>
             </div>
 
             <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
