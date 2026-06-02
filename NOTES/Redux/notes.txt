@@ -1,0 +1,23 @@
+1. since we know that React is used for UI, that is, React is a UI toolkit.
+
+2. and while creating react components and UI we get a lot of data to manage which usually travels from components to components and this is called STATE MANAGEMENT.
+
+3. till now we were managing states by props-drilling but from now on we'll be using Redux for better state management.
+
+4. when using props-drilling our data was transferring from root to parent to child to grandchild. but we only needed our data in grandchild so to remove this inconsistency we used Context API which removed the intermediate layers of data transfer. But still the data was called through hooks and we had to create AuthContext for that and this was time taking and then Redux came into picture. Although Redux came before AuthContext it still provides better and more reliable features than AuthContext for scalability and state management.
+
+5. Redux was first in the market which could provide state management and thus its syntax and boiler plate codes were very heavy and hard to interpret for eginners so facebook dveloped its upgraded version which is Redux-Toolkit 
+
+6. Refer to attached file of Redux documentations for more better understanding with examples.
+
+7. Lets understand the Redux architecture---
+    for Image reference refer to the image in documentation
+    There are suppose 3 parts in which our frontend is working which are: UI layer, Event handler and Store(redux).
+
+    UI layer holds the Ui like buttons and forms and clickable elements. Then the event handler comes into play which sends those working components(events) as actions(these are objects which describe what has happened and what to do). the actions then go to the Store which contains Reducers and States.
+    Reducers are nothing but just functions which perform specific tasks like change user, change theme etc. by changing the states when these reducers get doone with their work then they transfer the updated component's data back to the UI layer through those updated states.
+
+8. while using AutContext we were creating context for multiple features like theme and user id change etc. for these features we use SLICES in Redux toolkit which can be named anything.
+
+9. think of Slices as small shops which are present inside a big mall named store. each shop must have some name which is given inside the slices and each shop must provide some facility which are present as reducers in it. 
+    NOTE: check the syntax and export of slices carefully.
